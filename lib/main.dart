@@ -12,8 +12,19 @@ class TodoApp extends StatelessWidget {
     return MaterialApp(
       title: "Todo manager",
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          scaffoldBackgroundColor: Colors.amberAccent),
+      primarySwatch: Colors.blue,
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: Colors.grey[100],
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+        elevation: 4,
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
+      ),),
       home: TodoList(),
     );
   }
