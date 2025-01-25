@@ -135,6 +135,9 @@ class TodoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+         onTap: () {
+     onTodoChanged(todo);
+    },
           leading: Checkbox(
  checkColor: Colors.greenAccent,
        activeColor: Colors.red,
@@ -146,12 +149,15 @@ class TodoItem extends StatelessWidget {
         const Expanded(child: Text("data")),
         
         IconButton(
-          onPressed: () {},
+                   onPressed: () {
+           removeTodo(todo);
+         },
            alignment: Alignment.centerRight,
            iconSize: 30,
            icon: const Icon(
            Icons.delete,
            color: Colors.red,
+           
        ),)
       ],
     ));
