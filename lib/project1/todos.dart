@@ -8,7 +8,7 @@ class Todo {
 }
 
 class TodoList extends StatefulWidget {
-  TodoList({super.key});
+  const TodoList({super.key});
 
   @override
   State<TodoList> createState() => _TodoListState();
@@ -41,7 +41,7 @@ class _TodoListState extends State<TodoList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("todo list")),
+      appBar: AppBar(title: const Text("todo list")),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         children: _todos.map((Todo todo) {
@@ -104,7 +104,7 @@ class _TodoListState extends State<TodoList> {
 
 class TodoItem extends StatelessWidget {
    final Todo todo;
-  TodoItem(
+  const TodoItem(
       {super.key,
       required this.todo,
       required this.onTodoChanged,
