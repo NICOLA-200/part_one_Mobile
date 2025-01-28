@@ -4,7 +4,7 @@ import 'package:flutter_full/prodo/widgets/add_todo_dialog.dart';
 import 'package:flutter_full/prodo/widgets/todo_item.dart';
 
 class TodoListScreen extends StatefulWidget {
-  TodoListScreen({super.key});
+  const TodoListScreen({super.key});
 
   @override
   State<TodoListScreen> createState() => _TodoListScreenState();
