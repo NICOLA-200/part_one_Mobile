@@ -5,5 +5,7 @@ class AppTheme {
       brightness: Brightness.dark,
       primaryColor: Colors.black38,
       scaffoldBackgroundColor: Colors.white30,
-      appBarTheme: const AppBarTheme(backgroundColor: Colors.blueAccent));
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.blueAccent,
+        elevation: 4));
 }
