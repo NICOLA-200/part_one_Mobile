@@ -50,7 +50,13 @@ class _TodoListScreenState extends State<TodoListScreen> {
       body: Center(
         child: ListView(
           children: todos.map((todo) {
-            return TodoItem(todo: todo);
+            return TodoItem(
+              todo: todo,
+              onTodoChanged: _handleTodoChange,
+              removeTodo: _deleteTodoItem,
+
+              
+            );
           }).toList(),
         ),
       ),
