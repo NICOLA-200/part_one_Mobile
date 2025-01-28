@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full/prodo/model/todo.dart';
 
 class TodoItem extends StatelessWidget {
-  const TodoItem({super.key});
+  final Todo todo;
+
+  TodoItem({super.key, required this.todo});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      child: TextButton(onPressed: () {}, child: Icon(Icons.access_time_filled_sharp)),
+    return Container(
+      child: TextButton(
+          onPressed: () {}, child: Text(todo.name)),
     );
   }
 }
